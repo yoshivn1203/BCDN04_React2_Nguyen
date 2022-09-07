@@ -4,15 +4,15 @@ import Model from './components/Model';
 import GlassesList from './components/GlassesList';
 
 function App() {
-  const [selectedGlassesId, setSelectedGlassesId] = useState();
-  const ChangeGlassesHandler = (id) => {
-    setSelectedGlassesId(id);
+  const [selectedGlasses, setSelectedGlasses] = useState({});
+  const ChangeGlassesHandler = (glasses) => {
+    setSelectedGlasses(glasses);
   };
 
   return (
     <>
       <Header />
-      <Model selectedGlassesId={selectedGlassesId} />
+      <Model selectedGlasses={selectedGlasses} />
       <GlassesList onChangeGlasses={ChangeGlassesHandler} />
     </>
   );

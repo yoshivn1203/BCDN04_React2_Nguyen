@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import modelImg from '../assets/glassesImage/model.jpg';
 import classes from './Model.module.css';
-import { data } from '../assets/data/index';
 
 function Model(props) {
-  const selectedGlasses = data.find((glasses) => glasses.id === props.selectedGlassesId);
+  const selectedGlasses = props.selectedGlasses;
+  const { name, price, desc, url } = selectedGlasses;
 
   return (
     <div className={classes.content}>
@@ -13,12 +13,12 @@ function Model(props) {
       </div>
       <div className={classes.card}>
         <img src={modelImg} alt='model' />
-        {selectedGlasses && <img src={selectedGlasses.url} alt='glasses' />}
-        {selectedGlasses && (
+        {url && <img src={url} alt='glasses' />}
+        {name && (
           <div className={classes.description}>
-            <h4>{selectedGlasses.name}</h4>
-            <h5>{`Price: $${selectedGlasses.price}`}</h5>
-            <p>{selectedGlasses.desc}</p>
+            <h4>{name}</h4>
+            <h5>{`Price: $${price}`}</h5>
+            <p>{desc}</p>
           </div>
         )}
       </div>

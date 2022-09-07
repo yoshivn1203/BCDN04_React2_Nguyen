@@ -3,8 +3,8 @@ import classes from './GlassesList.module.css';
 import { data } from '../assets/data/index';
 
 function GlassesList(props) {
-  const onClickHandler = (id) => {
-    props.onChangeGlasses(id);
+  const onClickHandler = (glasses) => {
+    props.onChangeGlasses(glasses);
   };
 
   return (
@@ -12,7 +12,7 @@ function GlassesList(props) {
       {data.map((glasses) => {
         const { id, url } = glasses;
         return (
-          <img key={id} src={url} alt='glasses' onClick={() => onClickHandler(id)} />
+          <img key={id} src={url} alt='glasses' onClick={() => onClickHandler(glasses)} />
         );
       })}
     </div>
