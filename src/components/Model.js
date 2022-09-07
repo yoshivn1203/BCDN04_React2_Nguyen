@@ -1,5 +1,4 @@
 import React from 'react';
-import modelImg from '../assets/glassesImage/model.jpg';
 import classes from './Model.module.css';
 
 function Model(props) {
@@ -9,10 +8,10 @@ function Model(props) {
   return (
     <div className={classes.content}>
       <div className={classes.card}>
-        <img src={modelImg} alt='model' />
+        <img src='./glassesImage/model.jpg' alt='model' />
       </div>
       <div className={classes.card}>
-        <img src={modelImg} alt='model' />
+        <img src='./glassesImage/model.jpg' alt='model' />
         {url && <img src={url} alt='glasses' />}
         {name && (
           <div className={classes.description}>
