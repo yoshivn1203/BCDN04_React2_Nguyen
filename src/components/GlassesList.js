@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './GlassesList.module.css';
-// import { data } from '../assets/data/index';
 import data from '../dataGlasses.json';
 
 function GlassesList(props) {
