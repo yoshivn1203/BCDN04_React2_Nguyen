@@ -12,7 +12,9 @@ function GlassesList(props) {
       {data.map((glasses) => {
         const { id, url } = glasses;
         return (
-          <img key={id} src={url} alt='glasses' onClick={() => onClickHandler(glasses)} />
+          <div key={id} onClick={() => onClickHandler(glasses)}>
+            <img src={url} alt='glasses' />
+          </div>
         );
       })}
     </div>
