@@ -5,15 +5,12 @@ import GlassesList from './components/GlassesList';
 
 function App() {
   const [selectedGlasses, setSelectedGlasses] = useState({});
-  const ChangeGlassesHandler = (glasses) => {
-    setSelectedGlasses(glasses);
-  };
 
   return (
     <>
       <Header />
       <Model selectedGlasses={selectedGlasses} />
-      <GlassesList onChangeGlasses={ChangeGlassesHandler} />
+      <GlassesList onChangeGlasses={(glasses) => setSelectedGlasses(glasses)} />
     </>
   );
 }

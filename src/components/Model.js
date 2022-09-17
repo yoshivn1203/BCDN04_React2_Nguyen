@@ -2,8 +2,7 @@ import React from 'react';
 import classes from './Model.module.css';
 
 function Model(props) {
-  const selectedGlasses = props.selectedGlasses;
-  const { name, price, desc, url } = selectedGlasses;
+  const { name, price, desc, url } = props.selectedGlasses;
 
   return (
     <div className={classes.content}>

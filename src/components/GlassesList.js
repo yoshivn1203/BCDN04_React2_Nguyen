@@ -3,16 +3,14 @@ import classes from './GlassesList.module.css';
 import data from '../dataGlasses.json';
 
 function GlassesList(props) {
-  const onClickHandler = (glasses) => {
-    props.onChangeGlasses(glasses);
-  };
+  const { onChangeGlasses } = props;
 
   return (
     <div className={classes.container}>
       {data.map((glasses) => {
         const { id, url } = glasses;
         return (
-          <div key={id} onClick={() => onClickHandler(glasses)}>
+          <div key={id} onClick={() => onChangeGlasses(glasses)}>
             <img src={url} alt='glasses' />
           </div>
         );
